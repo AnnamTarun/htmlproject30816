@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        nav {
+    background-color: #333; /* Change this to your desired background color */
+  }
+  
+  nav a {
+    display: inline-block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white; /* Change this to your desired text color */
+  }
+  
+  nav a:hover {
+    background-color: #555; /* Change this to your desired hover background color */
+  }
+  select#attendance_status {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    height: 40px; /* Adjust the height to your desired value */
+}
+
+  /* Centering the navigation links */
+  nav ul {
+    text-align: center;
+  }
+  
+  nav li {
+    display: inline;
+    margin-right: 20px; /* Adjust the spacing between links */
+  }
+  
+  /* Making the navigation bar fixed at the top */
+  nav {
+    
+    top: 0;
+    width: 100%;
+  }
+    </style>
+</head>
+<body>
+
+    <h2>Attendance Tracking</h2>
+    <body bgcolor="#B6C4B6">
+        <nav>
+            <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="attendence.html">Attendance</a></li>
+        <li><a href="login.html">Logout</a>
+        
+    </ul>
+    </nav>
+    <form action="process_attendance.php" method="post">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required>
+
+        <label for="attendance_status">Attendance Status:</label>
+        <select id="attendance_status" name="attendance_status" required>
+            <option value="present">Present</option>
+            <option value="absent">Absent</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
